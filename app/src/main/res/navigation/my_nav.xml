@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dbcardealership.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_clientFragment"
+            app:destination="@id/clientFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_managerFragment"
+            app:destination="@id/managerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.dbcardealership.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_clientFragment"
+            app:destination="@id/clientFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_managerFragment"
+            app:destination="@id/managerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientFragment"
+        android:name="com.example.dbcardealership.fragments.ClientFragment"
+        android:label="fragment_client"
+        tools:layout="@layout/fragment_client" />
+    <fragment
+        android:id="@+id/managerFragment"
+        android:name="com.example.dbcardealership.fragments.ManagerFragment"
+        android:label="fragment_manager"
+        tools:layout="@layout/fragment_manager" >
+        <action
+            android:id="@+id/action_managerFragment_to_managerPanelFragment"
+            app:destination="@id/managerPanelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerPanelFragment"
+        android:name="com.example.dbcardealership.fragments.ManagerPanelFragment"
+        android:label="fragment_manager_panel"
+        tools:layout="@layout/fragment_manager_panel" >
+        <action
+            android:id="@+id/action_managerPanelFragment_to_backupsFragment"
+            app:destination="@id/backupsFragment" />
+        <action
+            android:id="@+id/action_managerPanelFragment_to_addNewCarFragment"
+            app:destination="@id/addNewCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backupsFragment"
+        android:name="com.example.dbcardealership.fragments.BackupsFragment"
+        android:label="fragment_backups"
+        tools:layout="@layout/fragment_backups" />
+    <fragment
+        android:id="@+id/addNewCarFragment"
+        android:name="com.example.dbcardealership.fragments.AddNewCarFragment"
+        android:label="fragment_add_new_car"
+        tools:layout="@layout/fragment_add_new_car" />
+</navigation>
